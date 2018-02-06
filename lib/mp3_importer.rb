@@ -13,7 +13,8 @@ class MP3Importer
 
   def import
     @files.each do |file|
-      Song.new(file.split("-")[1].strip)
+      song = Song.new(file.split("-")[1].strip)
+      song.artist = file.split("-")[0].strip
     end
   end
 
