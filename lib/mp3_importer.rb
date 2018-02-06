@@ -6,7 +6,7 @@ class MP3Importer
   end
 
   def import
-    @files = Dir[@path + "/*"]
+    @files = Dir[@path + "/*.mp3"]
     puts @files[2]
   end
 
