@@ -7,16 +7,12 @@ class MP3Importer
 
   def import
     @files = Dir[@path + "/*.mp3"]
-    puts @files.class
   end
 
-  # def files
-  #   @files.each do |file|
-  #     Song.new(file.split("/")[-1].split("-")[1].strip)
-  #   end
-  #
-  # end
+  def files
+    @files.each do |file|
+      Song.new(file.split("/")[-1].split("-")[1].strip)
+    end
+  end
 
 end
-
-MP3Importer.new('./db/mp3s').import
