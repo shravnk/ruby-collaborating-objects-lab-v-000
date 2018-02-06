@@ -5,7 +5,7 @@ class Artist
     @name = name
     @songs = []
   end
- 
+
   def save
     @@all << self
   end
@@ -15,7 +15,7 @@ class Artist
   end
 
   def self.find_or_create_by_name(name)
-    existing_artist = @@all.detect {|artist| artist.name == name}
+    @@all.detect {|artist| artist.name == name} || artist = self.new(name)
   end
 
   def print_songs
