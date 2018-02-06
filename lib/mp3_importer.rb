@@ -18,3 +18,5 @@ class MP3Importer
   # end
 
 end
+
+MP3Importer.new('./db/mp3s').import
