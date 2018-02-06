@@ -6,11 +6,11 @@ class MP3Importer
     @files = []
   end
 
-  def import
+  def files
     @files = Dir[@path + "/*.mp3"]
   end
 
-  def files
+  def import
     @files.each do |file|
       Song.new(file.split("/")[-1].split("-")[1].strip)
     end
