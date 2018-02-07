@@ -15,7 +15,12 @@ class MP3Importer
     @files.each do |file|
       song = Song.new(file.split("-")[1].strip)
       song.artist = file.split("-")[0].strip
+      binding.pry
     end
   end
 
 end
+
+test_music_path = "./spec/fixtures/mp3s"
+music_importer = MP3Importer.new(test_music_path)
+music_importer.import
