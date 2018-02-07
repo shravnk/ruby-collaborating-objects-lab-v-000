@@ -22,7 +22,7 @@ class MP3Importer
     fixed_files.each do |file|
       song = Song.new(file.split("-")[1].strip)
       song.artist = file.split("-")[0].strip
-      binding.pry
+      
     end
   end
 
