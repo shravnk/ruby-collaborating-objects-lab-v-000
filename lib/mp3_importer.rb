@@ -1,8 +1,3 @@
-require 'pry'
-require_relative "../lib/artist.rb"
-require_relative "../lib/song.rb"
-require_relative "../lib/mp3_importer.rb"
-
 class MP3Importer
   attr_accessor :path, :files
 
@@ -18,9 +13,7 @@ class MP3Importer
 
   def import
     self.files.each do |file|
-
       Song.new_by_filename(file)
-      binding.pry
     end
   end
 
