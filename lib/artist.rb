@@ -19,7 +19,7 @@ class Artist
   end
 
   def print_songs
-    @songs.each {|song| puts song.title}
+    @songs.each {|song| puts song.name}
   end
 
   def add_song(song)
