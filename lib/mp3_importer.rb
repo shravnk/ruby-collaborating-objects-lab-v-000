@@ -17,11 +17,7 @@ class MP3Importer
   end
 
   def import
-    fixed_files = self.files
-
-    fixed_files.each do |file|
-      # song = Song.new(file.split("-")[1].strip)
-      # song.artist = file.split("-")[0].strip
+    self.files.each do |file|
       Song.new_by_filename(file)
     end
   end
