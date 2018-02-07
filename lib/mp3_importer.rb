@@ -19,10 +19,10 @@ class MP3Importer
   def import
     fixed_files = self.files
     binding.pry
-    @fixed_files.each do |file|
+    fixed_files.each do |file|
       song = Song.new(file.split("-")[1].strip)
       song.artist = file.split("-")[0].strip
-      
+
     end
   end
 
