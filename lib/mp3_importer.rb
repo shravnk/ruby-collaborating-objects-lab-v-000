@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'spec/spec_helper'
 require 'pry'
 
 class MP3Importer
